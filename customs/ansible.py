@@ -17,3 +17,11 @@ class Ansible_Tower(Custom):
     _label = "Ansible Tower"
     urlretrieve(_url, _icon)
     super().__init__(_label, _icon)
+
+    class Ansible_Playbook(Custom):
+      def __init__(self):
+        _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/Custom-Nodes/ansible_playbook.png"
+        _icon = "ansible_playbook.png"
+        _label = "Ansible Playbook"
+        urlretrieve(_url, _icon)
+        super().__init__(_label, _icon)
