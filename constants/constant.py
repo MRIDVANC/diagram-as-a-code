@@ -28,4 +28,4 @@ ANSIBLE_LOGO = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/mas
 '''REDHAT'''
 
 
-OPENSHIFT_LOGO ="https://github.com/MRIDVANC/diagram-as-a-code/blob/master/custom_icons/redhat/openshift/openshift.png"
+OPENSHIFT_LOGO ="https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/custom_icons/redhat/openshift/openshift.png"
