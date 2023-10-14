@@ -1,11 +1,15 @@
 from diagrams.custom import Custom
 from urllib.request import urlretrieve
 
+from constants.constant import OPENSHIFT_LOGO
+
 
 class Openshift(Custom):
+
   def __init__(self):
-    _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/custom_icons/rhel/openshift.png"
+    _url = OPENSHIFT_LOGO
     _icon = "openshift.png"
-    _label = "Openshift"
+    _label = "openshit"
     urlretrieve(_url, _icon)
     super().__init__(_label, _icon)
+
