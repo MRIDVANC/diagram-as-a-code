@@ -1,13 +1,11 @@
 from typing import List
 
 from diagrams import Diagram, Cluster
-from diagrams.openstack.compute import Nova
 from diagrams.openstack.networking import Neutron
 from diagrams.openstack.storage import Cinder
 from diagrams.oci.compute import BareMetal, BM
 from diagrams.oci.connectivity import Backbone
 from customs.ansible import Ansible
-from customs.openshift import Openshift
 
 with (Diagram("Openstack Cloud", show=False, direction="TB")):
     # Datacenter1
@@ -16,7 +14,7 @@ with (Diagram("Openstack Cloud", show=False, direction="TB")):
     server1: BM = BareMetal("CTR01")
     server2: BM = BareMetal("CTR02")
     Ansible = Ansible()
-    Openshift = Openshift()
+
 
     with Cluster("CONTROL GROUP"):
         ctrsrv =  Ansible >> [ server1, server2 ]
