@@ -12,7 +12,8 @@ from customs.openshift import Openshift
 
 with Diagram(name="Advanced Web Service with On-Premise (colored)", show=False):
     ingress = Ansible()
-    openshift = Openshift()
+    egress = Openshift("os")
+
 
     metrics = Prometheus("metric")
     metrics << Edge(color="firebrick", style="dashed") << Grafana("monitoring")
@@ -24,7 +25,7 @@ with Diagram(name="Advanced Web Service with On-Premise (colored)", show=False):
             Server("ctr03")]
 
     with Cluster("Sessions HA"):
-        primary = openshift
+        primary = egress
         primary - Edge(color="brown", style="dashed") - Redis("replica") << Edge(label="collect") << metrics
         grpcsvc >> Edge(color="brown") >> primary
 
