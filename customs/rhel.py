@@ -4,7 +4,7 @@ from urllib.request import urlretrieve
 
 class RHEL(Custom):
   def __init__(self):
-    _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/Custom-Nodes/rhel.png"
+    _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/custom_icons/rhel/rhel.png"
     _icon = "rhel.png"
     _label = "Red Hat"
     urlretrieve(_url, _icon)

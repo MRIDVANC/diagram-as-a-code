@@ -4,7 +4,7 @@ from urllib.request import urlretrieve
 
 class Ansible(Custom):
   def __init__(self):
-    _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/Custom-Nodes/ansible.png"
+    _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/custom_icons/ansible/ansible.png"
     _icon = "ansible.png"
     _label = "Ansible"
     urlretrieve(_url, _icon)
@@ -12,7 +12,7 @@ class Ansible(Custom):
 
 class Ansible_Tower(Custom):
   def __init__(self):
-    _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/Custom-Nodes/ansible_tower.png"
+    _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/custom_icons/ansible/ansible_tower.png"
     _icon = "ansible_tower.png"
     _label = "Ansible Tower"
     urlretrieve(_url, _icon)
@@ -20,7 +20,7 @@ class Ansible_Tower(Custom):
 
     class Ansible_Playbook(Custom):
       def __init__(self):
-        _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/Custom-Nodes/ansible_playbook.png"
+        _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/custom_icons/ansible/ansible_playbook.png"
         _icon = "ansible_playbook.png"
         _label = "Ansible Playbook"
         urlretrieve(_url, _icon)

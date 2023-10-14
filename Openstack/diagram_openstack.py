@@ -4,7 +4,7 @@ from diagrams.openstack.networking import Neutron
 from diagrams.openstack.storage import Cinder
 from diagrams.oci.compute import BareMetal
 from diagrams.oci.connectivity import Backbone
-from customs.ansible import
+from customs.ansible import Ansible
 
 
 
