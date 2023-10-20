@@ -19,8 +19,6 @@ with (Diagram("Openstack Cloud", show=False, direction="TB")):
     Ansible = Ansible()
 
 
-
-
     with Cluster("CONTROL GROUP"):
         ctrsrv =  Ansible >> [ server1, server2 ]
 

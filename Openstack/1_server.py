@@ -5,7 +5,7 @@ from diagrams.onprem.monitoring import Grafana, Prometheus
 
 
 
-with (Diagram(name="GBZ-SRV01 BAĞLANTI", show=False)):
+with (Diagram(name="GBZ-SRV01 BAGLANTI", show=False)):
 
     metrics = Prometheus("metric")
     metrics << Edge(color="firebrick", style="dashed") << Grafana("monitoring")
