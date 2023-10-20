@@ -10,7 +10,7 @@ from diagrams.onprem.queue import Kafka
 from customs.ansible import Ansible
 from customs.openshift import Openshift
 
-with Diagram(name="Advanced Web Service with On-Premise (colored)", show=False):
+with Diagram(name="Tesis İçi Gelişmiş Web Hizmeti (renkli)", show=False):
     ingress = Ansible()
 
 
