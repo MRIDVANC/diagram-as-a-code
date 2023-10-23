@@ -1,18 +1,14 @@
 from diagrams import Cluster, Diagram, Edge
+from diagrams.onprem.aggregator import Fluentd
 from diagrams.onprem.analytics import Spark
 from diagrams.onprem.compute import Server
 from diagrams.onprem.database import PostgreSQL
-from diagrams.onprem.inmemory import Redis
-from diagrams.onprem.aggregator import Fluentd
 from diagrams.onprem.monitoring import Grafana, Prometheus
-from diagrams.onprem.network import Nginx
 from diagrams.onprem.queue import Kafka
-from customs.ansible import Ansible
-from customs.openshift import Openshift
+from customs.rhel import logoAnsible, Openshift
 
 with Diagram(name="Tesis İçi Gelişmiş Web Hizmeti (renkli)", show=False):
-    ingress = Ansible()
-
+    ingress = logoAnsible()
 
     metrics = Prometheus("metric")
     metrics << Edge(color="firebrick", style="dashed") << Grafana("monitoring")

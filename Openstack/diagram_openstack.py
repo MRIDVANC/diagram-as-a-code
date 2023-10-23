@@ -1,21 +1,16 @@
 from diagrams import Diagram, Cluster
 from diagrams.oci.compute import BareMetal, BM
 from diagrams.oci.connectivity import Backbone
-
-from customs.ansible import Ansible
-
+from customs.rhel import logoAnsible
 with (Diagram("Openstack Cloud", show=False, direction="TB")):
     # Datacenter1
     backbone1 = Backbone("Backbone1")
     backbone2 = Backbone("Backbone2")
     server1: BM = BareMetal("CTR01")
     server2: BM = BareMetal("CTR02")
-    Ansible = Ansible()
-
-
-
+    Ansible = logoAnsible()
     with Cluster("CONTROL GROUP"):
-        ctrsrv =  Ansible >> [ server1, server2 ]
+        ctrsrv = Ansible >> [server1, server2]
 
     with Cluster("CABINET1"):
         eor1 = backbone1 >> [
@@ -47,4 +42,3 @@ with (Diagram("Openstack Cloud", show=False, direction="TB")):
             BareMetal("Sunucu20"),
 
         ]
-
