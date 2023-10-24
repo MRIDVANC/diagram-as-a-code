@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 class Switch:
     def __init__(self, switch_name, switch_port, port_speed, port, connected_server):
         self.port_speed = port_speed
@@ -8,14 +9,15 @@ class Switch:
         self.port = port
         self.connected_server = connected_server
 
+
 # Excel dosyasını okuyup sunucu adına göre switchleri arayan fonksiyon
-def read_excel_and_search_server(excel_file, search_server_name):
+def read_excel_and_search_server(envanter_file, search_server):
     try:
         # Excel dosyasını okumaya çalış
-        df = pd.read_excel(excel_file)
+        df = pd.read_excel(envanter_file)
     except FileNotFoundError:
         # Excel dosyası bulunamazsa hata mesajı gönder
-        print(f"Excel dosyası bulunamadı: {excel_file}")
+        print(f"Excel dosyası bulunamadı: {envanter_file}")
         return
 
     # Switch nesnelerini içerecek bir liste oluştur
@@ -36,12 +38,12 @@ def read_excel_and_search_server(excel_file, search_server_name):
 
     # Kullanıcının girdiği sunucu adına göre switchleri ara
     for switch in switch_objects:
-        if switch.connected_server == search_server_name:
+        if switch.connected_server == search_server:
             found_switches.append(switch)
 
     if not found_switches:
         # Eğer hiç switch bulunamazsa kullanıcıya bilgi ver ve çıkmak için 'q' girmesini iste
-        print(f"'{search_server_name}' sunucusuna bağlı bir switch bulunamadı. (Çıkmak için 'q' girin): ")
+        print(f"'{search_server}' sunucusuna bağlı bir switch bulunamadı. (Çıkmak için 'q' girin): ")
     else:
         # Bulunan switchleri ekrana yazdır
         for found_switch in found_switches:
@@ -51,6 +53,7 @@ def read_excel_and_search_server(excel_file, search_server_name):
             print("Port:", found_switch.port)
             print("Connected Server:", found_switch.connected_server)
             print("=" * 40)
+
 
 if __name__ == "__main__":
     excel_file = "envanter.xlsx"  # Excel dosyasının yolu ve adı
