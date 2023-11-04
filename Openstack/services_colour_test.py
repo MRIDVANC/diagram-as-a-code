@@ -5,10 +5,10 @@ from diagrams.onprem.compute import Server
 from diagrams.onprem.database import PostgreSQL
 from diagrams.onprem.monitoring import Grafana, Prometheus
 from diagrams.onprem.queue import Kafka
-from customs.rhel import logoAnsible, Openshift
+from customs.rhel import LogoAnsible, Openshift
 
 with Diagram(name="Tesis İçi Gelişmiş Web Hizmeti (renkli)", show=False):
-    ingress = logoAnsible()
+    ingress = LogoAnsible()
 
     metrics = Prometheus("metric")
     metrics << Edge(color="firebrick", style="dashed") << Grafana("monitoring")

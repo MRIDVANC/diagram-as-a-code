@@ -1,10 +1,9 @@
 from urllib.request import urlretrieve
 from diagrams.custom import Custom
-from constants.constant import ANSIBLE_LOGO
-from constants.constant import OPENSHIFT_LOGO
+from constants.constant import ANSIBLE_LOGO, OPENSHIFT_LOGO
 
 
-class RHEL(Custom):
+class Rhel(Custom):
     def __init__(self):
         _url = "https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/custom_icons/rhel/rhel.png"
         _icon = "rhel.png"
@@ -13,7 +12,7 @@ class RHEL(Custom):
         super().__init__(_label, _icon)
 
 
-class logoAnsible(Custom):
+class LogoAnsible(Custom):
     def __init__(self):
         _url = ANSIBLE_LOGO
         _icon = "ansible.png"
@@ -22,7 +21,7 @@ class logoAnsible(Custom):
         super().__init__(_label, _icon)
 
 
-class towerAnsib(Custom):
+class TowerAnsible(Custom):
     def __init__(self):
         _url = ("https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/custom_icons/ansible"
                 "/ansible_tower.png")
@@ -32,7 +31,7 @@ class towerAnsib(Custom):
         super().__init__(_label, _icon)
 
 
-class playbookAnsible(Custom):
+class PlaybookAnsible(Custom):
     def __init__(self):
         _url = ("https://raw.githubusercontent.com/MRIDVANC/diagram-as-a-code/master/custom_icons/ansible"
                 "/ansible_playbook.png")
